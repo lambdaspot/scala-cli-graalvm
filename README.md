@@ -17,6 +17,7 @@ docker pull lambdaspot/scala-cli-graalvm:latest
 ## Example usage
 
 ```bash
+docker run --rm -v $(pwd)/demo/hello3.scala:/hello3.scala lambdaspot/scala-cli-graalvm:latest scala-cli /hello3.scala
 docker run --rm -v $(pwd)/demo/test.scala:/hello3.scala lambdaspot/scala-cli-graalvm:latest scala-cli --scala 3 /hello3.scala
 docker run --rm -v $(pwd)/demo/test.scala:/hello2.scala lambdaspot/scala-cli-graalvm:latest scala-cli --scala 2.13 /hello2.scala
 ```
