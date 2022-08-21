@@ -37,7 +37,6 @@ RUN \
   && scala-cli compile - --scala ${SCALA_3_VERSION}
 
 # Preload GraalVM and Native Image
-#RUN scala-cli package --native-image --graalvm-jvm-id graalvm-java${JVM_VERSION}:${GRAAL_VERSION} /tmp/helloScala3.scala -o /tmp/hello \
 RUN \
   scala-cli package --native-image --graalvm-jvm-id graalvm-java${JVM_VERSION}:${GRAAL_VERSION} /tmp/helloScala3.scala -o /tmp/hello \
   && rm /tmp/helloScala3.scala \
