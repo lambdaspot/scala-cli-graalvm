@@ -1,6 +1,6 @@
-# docker-graalvm
+# scala-cli-graalvm
 
-Ubuntu based docker image using GraalVM as JVM.
+Ubuntu based docker image using GraalVM as JVM for Scala.
 
 ## Notice!
 **TODO - work in progress - not yet published**
