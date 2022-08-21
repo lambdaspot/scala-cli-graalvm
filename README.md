@@ -14,13 +14,26 @@ It uses versioning based on: `<javaVersion>-<graalVersion>-<gitSha>`. Merges to 
 ```bash
 docker pull lambdaspot/scala-cli-graalvm:latest
 ```
+
+This image has preloaded packages for fast startup and execution under the listed Scala versions and GraalVM distribution.
+
+- GraalVM and Native Image: 22.1.0 for JDK 17.
+- Scala: 2.12.16, 2.13.8, 3.1.3
+
 ## Example usage
 
+Scala 3:
 ```bash
-docker run --rm -v $(pwd)/demo/hello3.scala:/hello3.scala lambdaspot/scala-cli-graalvm:latest scala-cli /hello3.scala
-docker run --rm -v $(pwd)/demo/test.scala:/hello3.scala lambdaspot/scala-cli-graalvm:latest scala-cli --scala 3 /hello3.scala
-docker run --rm -v $(pwd)/demo/test.scala:/hello2.scala lambdaspot/scala-cli-graalvm:latest scala-cli --scala 2.13 /hello2.scala
+docker run --rm -v $(pwd)/demo/hello3.scala:/hello3.scala scala-cli-graalvm:latest package --scala 3.1.3 --native-image --graalvm-jvm-id graalvm-java17:22.1.0 /hello3.scala
 ```
+Scala 2
+```bash
+docker run --rm -v $(pwd)/demo/hello2.scala:/hello2.scala scala-cli-graalvm:latest package --scala 2.13.8 --native-image --graalvm-jvm-id graalvm-java17:22.1.0 /hello2.scala
+```
+
+## Options 
+
+TODO: add examples for options like passing the `reflect-config.json`.
 
 ## Building
 
