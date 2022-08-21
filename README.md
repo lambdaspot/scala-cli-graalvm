@@ -24,11 +24,11 @@ This image has preloaded packages for fast startup and execution under the liste
 
 Scala 3:
 ```bash
-docker run --rm -v $(pwd)/demo/hello3.scala:/hello3.scala scala-cli-graalvm:latest package --scala 3.1.3 --native-image --graalvm-jvm-id graalvm-java17:22.1.0 /hello3.scala
+docker run --rm -v $(pwd)/demo/hello3.scala:/hello3.scala scala-cli-graalvm:latest package --native-image --scala 3.1.3 --graalvm-jvm-id graalvm-java17:22.1.0 /hello3.scala
 ```
 Scala 2
 ```bash
-docker run --rm -v $(pwd)/demo/hello2.scala:/hello2.scala scala-cli-graalvm:latest package --scala 2.13.8 --native-image --graalvm-jvm-id graalvm-java17:22.1.0 /hello2.scala
+docker run --rm -v $(pwd)/demo/hello2.scala:/hello2.scala scala-cli-graalvm:latest package --native-image --scala 2.13.8 --graalvm-jvm-id graalvm-java17:22.1.0 /hello2.scala
 ```
 
 ## Options 
