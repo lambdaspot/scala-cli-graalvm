@@ -1,14 +1,14 @@
 FROM ubuntu:20.04
 
 # https://github.com/graalvm/graalvm-ce-builds/releases
-ARG GRAAL_VERSION=22.1.0
+ARG GRAAL_VERSION=22.3.0
 ARG JVM_VERSION=17
 # https://github.com/VirtusLab/scala-cli/releases
-ARG SCALA_CLI_VERSION=0.1.11
+ARG SCALA_CLI_VERSION=0.1.16
 # https://www.scala-lang.org/download/all.html
-ARG SCALA_2_12_VERSION=2.12.16
-ARG SCALA_2_13_VERSION=2.13.8
-ARG SCALA_3_VERSION=3.1.3
+ARG SCALA_2_12_VERSION=2.12.17
+ARG SCALA_2_13_VERSION=2.13.10
+ARG SCALA_3_VERSION=3.2.0
 
 ARG SCALA_CLI=https://github.com/VirtusLab/scala-cli/releases/download/v{$SCALA_CLI_VERSION}/scala-cli-x86_64-pc-linux-static.gz
 
